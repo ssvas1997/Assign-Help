@@ -1,0 +1,118 @@
+body
+{
+    background-color:#ffffe8;
+}
+
+table
+{
+    border:5px solid #6688aa;
+    border-radius:5px;
+    background-color:#6688aa;
+}
+
+td,th
+{
+    border:5px solid transparent;
+    border-radius:5px;
+    background-color:#bbccff;
+    color:#002277;
+    font-size: 25px;
+    font-weight: bold;
+    padding:10px;
+}
+
+input[type=button],input[type=submit],input[type=reset]
+{
+    height:35px;
+    width:150px;
+    border-radius:5px;
+    font-size:17px;
+    border:4px outset #002277;
+    font-weight: bold;
+    background-color:#0055aa;
+    color:#ffffaa;
+}
+
+input[type=text],input[type=password],input[type=email],input[type=number],input[type=date]
+{
+    height:35px;
+    border-radius:5px;
+    border-color:#0055aa;
+    border-width:0px 0px 3px 0px;
+    border-style:solid;
+    background-color: white;
+    padding-left:5px;
+    font-size: 17px;
+    color:#002277;
+}
+
+select
+{
+    height:35px;
+    border-radius:5px;
+    border-color:#0055aa;
+    border-width:0px 0px 3px 0px;
+    border-style:solid;
+    background-color: white;
+    padding-left:5px;
+    font-size: 17px;
+    color:#002277;
+}
+
+a
+{
+    color:#002277;
+}
+
+.dv1
+{
+    width:100%;
+    background-color:#555599;
+    display:block;
+    height:60px;
+    font-size:50px;
+    color:#ffffe8;
+}
+
+.tb
+{
+    border:2px solid transparent;
+    background-color: transparent;
+    padding:5px;
+}
+
+#btn{
+    height:35px;
+    width: 200px;
+    border-radius:5px;
+    font-size:17px;
+    border:4px outset #002277;
+    font-weight: bold;
+    background-color:#0055aa;
+    color:#ffffaa;
+}
+.updiv{
+   display:inline-block;
+    width:30%;
+    text-align: center;
+    float:left;
+    padding:5%;
+}
+.solndiv{
+    display:inline-block;
+    width:30%;
+    text-align: center;
+    float:left;
+    padding: 5%;
+}
+#mydiv
+{
+    padding-left:5%;
+        padding-right:5%;
+
+    margin-left: 12%;
+}
+input:invalid
+{
+    color: red;
+}

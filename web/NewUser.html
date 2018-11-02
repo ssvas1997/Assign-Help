@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>User Registration</title>
+        <link type='text/css' href='CSS/mystyle.css' rel='stylesheet' />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script>
+            function checkform()
+            {
+                document.getElementById("nm").innerHTML="";
+                document.getElementById("em").innerHTML="";
+                document.getElementById("ps").innerHTML="";
+                document.getElementById("ps2").innerHTML="";
+                document.getElementById("ph").innerHTML="";
+                var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                var phFormat = /^\d{10}$/;
+                if(document.f1.nm1.value=="")
+                {
+                    document.getElementById("nm").innerHTML="<font color=red>*Enter the name</font>";
+                    document.f1.nm1.focus();
+                    return false;
+                }
+                else if(!document.f1.eml.value.match(mailformat))
+                {
+                    document.getElementById("em").innerHTML="<font color=red>*Enter the email</font>";
+                    document.f1.eml.focus();
+                    return false;
+                }
+                else if(!document.f1.phn.value.match(phFormat))
+                {
+                    document.getElementById("ph").innerHTML="<font color=red>*Enter the contact number</font>";
+                    document.f1.phn.focus();
+                    return false;
+                }
+                else if(document.f1.pass.value=="")
+                {
+                    document.getElementById("ps").innerHTML="<font color=red>*Enter the password</font>";
+                    document.f1.pass.focus();
+                    return false;
+                }
+                else if(document.f1.pass2.value=="")
+                {
+                    document.getElementById("ps2").innerHTML="<font color=red>*Retype the password</font>";
+                    document.f1.pass2.focus();
+                    return false;
+                }
+                else if(document.f1.pass.value!=document.f1.pass2.value)
+                {
+                    document.getElementById("ps2").innerHTML="<font color=red>*password does not match</font>";
+                    document.f1.pass2.focus();
+                    return false;
+                }
+                else
+                    return true;
+            }
+        </script>
+        <style>
+            td
+            {
+                padding:5px;
+                font-size:22px;
+            }
+            #nm,#ps,#us,#ps2,#em,#ph,#do
+            {
+                border-color:transparent;
+                background-color: transparent;
+                font-size: 20px;
+                font-weight: normal;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <div class="dv1">
+        Assign Help
+        </div>
+            <form name="f1" method="post" action="NewUser" onsubmit="return checkform();">
+                <table border="1" cellpadding="10">
+                    <caption><h1><font color="#002277">User Registration</font></h1></caption>
+                    <tr align="center">
+                        <td>Name :</td><td><input type="text" placeholder=" Enter name" name="nm1" required></td>
+                        <td id="nm" style="position:absolute;"></td>
+                    </tr>
+                    <tr align="center">
+                        <td>Ph. no. :</td><td><input pattern="[789][0-9]{9}" maxlength="10" minlength="10" type="text" placeholder=" Enter phone no." name="phn" required></td>
+                        <td id="ph" style="position:absolute;"></td>
+                    </tr>
+                    <tr align="center">
+                        <td>Email :</td><td><input type="email" placeholder=" Enter email" name="eml" required></td>
+                        <td id="em" style="position:absolute;"></td>
+                    </tr>
+                    <tr align="center">
+                        <td>Password :</td><td><input type="password" placeholder=" Enter password" name="pass" required></td>
+                        <td id="ps" style="position:absolute;"></td>
+                    </tr>
+                    <tr align="center">
+                        <td>Confirm Password :</td><td><input type="password" placeholder=" Enter password again" name="pass2" required></td>
+                        <td id="ps2" style="position:absolute;"></td>
+                    </tr>
+                    <tr align="center">
+                        <td>User Type :</td>
+                        <td>
+                            <select name="utype">
+                                <option value="1">Student</option>
+                                <option value="2">Teacher</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td colspan="2"><input type="submit" value="Register"></td>
+                    </tr>
+                </table>
+                <br><a href='Login.html'><input type="button" value="Login"></a>
+            </form>
+        </center>
+    </body>
+</html>
