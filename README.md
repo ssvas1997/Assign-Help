@@ -15,6 +15,9 @@ The student can upload the assignment in our portal. A freelancer / teacher will
 </ul>
 <b>Database:</b>
 <ul><li>MySQL</li></ul>
-### Contributors
-@ssvas1997<a href=https://github.com/ssvas1997">@ssvas1997</a>
-- [@joshiadvait8](https://github.com/joshiadvait8)
+<br>
+<b>Contributors</b>
+<ul>
+  <li><a href=https://github.com/ssvas1997">@ssvas1997</a></li>
+  <li><a href="https://github.com/joshiadvait8">@joshiadvait8</a></li>
+ </ul>
